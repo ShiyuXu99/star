@@ -130,7 +130,7 @@ class Home extends Component {
                             <img src={letter} alt="letter" className="letter"/>
                         </Link>
                         <Link to={{
-                            pathname: '/',
+                            pathname: '/star',
                         }}>
                             <img src={SignInBtn} alt="button" className="plane"/>
                         </Link>
