@@ -73,12 +73,12 @@ class SignIn extends Component {
                     <Form >
                         <Form.Group style={{textAlign: 'left'}}>
                             <Form.Label >用户名</Form.Label>
-                            <Form.Control type="text" placeholder="Enter Username" name="user" onChange={this.handleInputChange} />
+                            <Form.Control type="text" name="user" onChange={this.handleInputChange} />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword" style={{textAlign: 'left'}}>
                             <Form.Label>密码</Form.Label>
-                            <Form.Control type="password" placeholder="Password" name="password" onChange={this.handleInputChange}/>
+                            <Form.Control type="password" name="password" onChange={this.handleInputChange}/>
                         </Form.Group>
                         <img src={SignInBtn}
                              alt = "plane"
