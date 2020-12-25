@@ -9,7 +9,7 @@ import SignIn from "./component/signIn";
 function App() {
   return (
     <div className="App">
-      <Router>
+        <Router>
         <div>
           <Route path="/" exact component={SignIn}/>
           <Route path="/Home" component={Home}/>
