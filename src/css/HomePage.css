@@ -1,0 +1,43 @@
+.homeBody{
+    background-color: #254676;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-backdrop {
+    background-image: url("../image/letterBackground.png");
+}
+
+.my-modal .modal-content {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.letter{
+    margin: 83vh -5vh -5vh -5vh;
+    width: 15vh;
+
+}
+.plane{
+    margin: 53vh -5vh -5vh -7vh;
+    width: 10vh;
+}
+.midImage{
+    width: 35vw;
+    margin-top: 15vh;
+}
+
+.dreamMachine{
+    width: 45vw;
+    margin-bottom: -10vh;
+    margin-left: -5vw;
+}
+
+text{
+    white-space: pre-line;
+
+}
+
+.note{
+    margin: 70vh -5vh -5vh -5vh;
+    width: 15vh;
+}

@@ -1,0 +1,26 @@
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../image/SignInBackground.JPG");
+    background-size: 100% 100%;
+
+}
+
+.card {
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); }
+.form-control{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logIn{
+    margin-bottom: 20px;
+}
+
+.SignInBtn{
+    width: 100px;
+}
