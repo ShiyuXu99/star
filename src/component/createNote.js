@@ -90,7 +90,6 @@ class CreateNote extends Component {
 
                         </Form.Group>
                         <img src = {planet} type="submit" alt = "planet" onClick={this.handleSubmit} className="planet"/>
-
                     </Form>
                 </Card>
 
