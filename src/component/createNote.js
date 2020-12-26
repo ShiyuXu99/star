@@ -54,7 +54,7 @@ class CreateNote extends Component {
     render() {
         if (this.state.redirect) {
             return <Redirect to={{
-                pathname: '/home',
+                pathname: '/star/home',
             }} />;
         }
         return (

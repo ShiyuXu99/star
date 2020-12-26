@@ -124,7 +124,7 @@ class Home extends Component {
 
                     <Col xs={1} className="firstCol">
                         <Link to={{
-                            pathname: '/CreateNote',
+                            pathname: '/star/CreateNote',
                         }}>
                             <img src={letter} alt="letter" className="letter"/>
                         </Link>
