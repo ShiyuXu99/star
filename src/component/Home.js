@@ -14,7 +14,6 @@ import moment from 'moment';
 
 
 class Home extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -36,7 +35,7 @@ class Home extends Component {
         console.log(tempMoment);
 
         let minus = moment().diff(tempMoment, 'minute')
-        if(minus >= 0 || tempMoment === null){
+        if(minus >= 1440 || tempMoment === null){
             let now = moment().format("llll");
             localStorage.setItem('moment', now);
             this.setState({moment: now});
