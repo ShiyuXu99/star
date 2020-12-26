@@ -12,8 +12,8 @@ function App() {
         <Router>
         <div>
           <Route path="/star" exact component={SignIn}/>
-          <Route path="/Home" component={Home}/>
-          <Route path="/CreateNote" component={CreateNote}/>
+          <Route path="/star/Home" component={Home}/>
+          <Route path="/star/CreateNote" component={CreateNote}/>
         </div>
       </Router>
     </div>
