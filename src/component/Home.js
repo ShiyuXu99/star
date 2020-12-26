@@ -62,6 +62,8 @@ class Home extends Component {
 
     }
 
+
+
     deletePost(id) {
         console.log("here for delete")
         axios.delete('https://tochenbackend.herokuapp.com/posts/' + id)
@@ -69,13 +71,11 @@ class Home extends Component {
     }
 
     handleModal = () => {
-        const user = window.$userName;
-        console.log(user);
-
         this.setState({
             modalShow: !this.state.modalShow,
         });
-        axios.get('https://tochenbackend.herokuapp.com/posts/'+ user)
+        console.log(this.props.location.state.userName);
+        axios.get('https://tochenbackend.herokuapp.com/posts/'+ this.props.location.state.userName)
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({posts: response.data})
@@ -117,6 +117,7 @@ class Home extends Component {
                     <Col xs={1} className="firstCol">
                         <Link to={{
                             pathname: '/star/CreateNote',
+                            state: { userName: this.props.location.state.userName }
                         }}>
                             <img src={letter} alt="letter" className="letter"/>
                         </Link>

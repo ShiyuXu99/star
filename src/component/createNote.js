@@ -17,6 +17,10 @@ class CreateNote extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log(this.props.location.state.userName);
+    }
+
     handleSubmit = (event) => {
         if(this.state.noteTitle === null || this.state.noteContent === null ||this.state.noteContent === null){
             alert("你有地方没有写完哦～")
@@ -55,6 +59,7 @@ class CreateNote extends Component {
         if (this.state.redirect) {
             return <Redirect to={{
                 pathname: '/star/home',
+                state: { userName: this.props.location.state.userName}
             }} />;
         }
         return (

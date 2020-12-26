@@ -61,7 +61,7 @@ class SignIn extends Component {
         if (this.state.redirect) {
             return <Redirect to={{
                 pathname: '/star/Home',
-                // state: { user: this.state.user }
+                state: { userName: this.state.user }
             }} />;
         }
         return (
