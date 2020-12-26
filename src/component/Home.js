@@ -68,21 +68,16 @@ class Home extends Component {
             .then(res => console.log(res.data));
     }
 
-    componentDidMount() {
-        const user = window.$userName;
-        console.log(user);
-        this.setState({
-            user:user
-        })
-    }
 
 
     handleModal = () => {
+        const user = window.$userName;
+        console.log(user);
 
         this.setState({
             modalShow: !this.state.modalShow,
         });
-        axios.get('https://tochenbackend.herokuapp.com/posts/'+ this.state.user)
+        axios.get('https://tochenbackend.herokuapp.com/posts/'+ user)
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({posts: response.data})
