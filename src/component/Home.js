@@ -68,8 +68,6 @@ class Home extends Component {
             .then(res => console.log(res.data));
     }
 
-
-
     handleModal = () => {
         const user = window.$userName;
         console.log(user);
