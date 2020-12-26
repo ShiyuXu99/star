@@ -30,14 +30,11 @@ class Home extends Component {
 
 
     buttonClicked = () => {
-        // console.log(this.state.moment);
         const tempMoment = localStorage.getItem('moment');
-        console.log(tempMoment);
 
         let minus = moment().diff(tempMoment, 'minute')
         if(minus >= 0 || tempMoment === null){
             let now = moment().format("llll");
-            localStorage.setItem('moment', now);
             this.setState({moment: now});
             if (this.state.image === true && this.state.showPopBtn === false) {
                 this.setState({
@@ -72,17 +69,19 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        const user = localStorage.getItem('user');
-        this.setState({ user: user });
+        const user = window.$userName;
+        console.log(user);
+        this.setState({
+            user:user
+        })
     }
 
 
     handleModal = () => {
-        // const user = window.user;
+
         this.setState({
             modalShow: !this.state.modalShow,
         });
-        console.log(this.state.user);
         axios.get('https://tochenbackend.herokuapp.com/posts/'+ this.state.user)
             .then(response => {
                 if (response.data.length > 0) {

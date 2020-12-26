@@ -25,16 +25,15 @@ class SignIn extends Component {
 
         axios.get('https://tochenbackend.herokuapp.com/user')
             .then(res => {
-                // this.setState({
-                //     userInformation: res.data
-                // })
                 let count = 0;
                 for(let i = 0; i< res.data.length; i++){
                     if(this.state.user === res.data[i].username){
-                        console.log(this.state.username);
                         if(this.state.password === res.data[i].password){
                             this.setState({redirect: true});
-                            localStorage.setItem('user', this.state.user);
+                            // localStorage.setItem('user', this.state.user);
+                            // console.log(this.state.user);
+                            window.$userName = this.state.user;
+                            console.log(window.$userName);
                         }
                         else{
                             alert("密码不对哦");
@@ -55,7 +54,6 @@ class SignIn extends Component {
         this.setState({
             [event.target.name]: event.target.value
         })
-        console.log(this.state.user)
     }
 
 
@@ -63,7 +61,7 @@ class SignIn extends Component {
         if (this.state.redirect) {
             return <Redirect to={{
                 pathname: '/star/Home',
-                state: { user: this.state.user }
+                // state: { user: this.state.user }
             }} />;
         }
         return (
